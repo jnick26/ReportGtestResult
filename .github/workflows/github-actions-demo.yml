@@ -41,7 +41,7 @@ jobs:
         shell: bash
         # Execute tests defined by the CMake configuration.  
         # See https://cmake.org/cmake/help/latest/manual/ctest.1.html for more detail
-        run: ./ComponentTest --gtest_output=xml:TestReport.xml
+        run: ./ComponentTest --gtest_output=xml:TestReport.xml || 1
 
       - name: Publish Unit Test Results
         uses: EnricoMi/publish-unit-test-result-action@v1
