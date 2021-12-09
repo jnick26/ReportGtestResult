@@ -39,8 +39,7 @@ conan_cmake_install(
   SETTINGS
   ${settings})
 
-find_package(fmt)
 find_package(GTest)
 
 add_executable(ComponentTest ComponentTest.cpp)
-target_link_libraries(ComponentTest PRIVATE fmt::fmt GTest::gmock_main)
+target_link_libraries(ComponentTest PRIVATE GTest::gmock_main)
